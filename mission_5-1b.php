@@ -35,7 +35,7 @@
         
         
     //「送信」ボタンが押されたとき
-        if (isset($_POST["submit"])){
+        if (!empty($_POST['name']) && !empty($_POST['comment']) && !empty($_POST['pass'])){
             //$edit_NUM = $_POST["edit_NUM"];
             $name = $_POST["name"]; //name : 入力された名前の値を取得
             $comment = $_POST["comment"]; //comment : 入力されたコメントの値を取得
